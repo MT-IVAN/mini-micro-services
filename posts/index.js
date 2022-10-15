@@ -1,11 +1,12 @@
 const express = require('express')
 const bodyParse = require('body-parser')
 const { randomBytes } = require('crypto')
+const cors = require('cors')
 
 const app = express()
 app.use(bodyParse.json())
-
-//mock data
+app.use(cors())
+//mock dat
 const posts = {};
 
 app.get('/posts', (req, res) => {
